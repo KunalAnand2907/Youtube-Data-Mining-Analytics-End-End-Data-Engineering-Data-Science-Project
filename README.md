@@ -1,4 +1,4 @@
-## Youtube 📺 Data Mining & Analysis 📈 End-End Data Engineering & Data Science Project 
+## YouTube 📺 Data Mining & NLP: Automated 📈 ETL for scraping, processing, text analytics, insights via Aws, Python, Firebase & Streamlit
 
 ### 📌 Demo app Link 
 
