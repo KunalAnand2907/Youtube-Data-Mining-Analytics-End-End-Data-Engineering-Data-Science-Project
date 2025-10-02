@@ -67,7 +67,7 @@ For this, Have built the ETL Data Pipeline from Scratch, where I loaded raw .jso
 </ul>
 
 ---
-🧩 **3. Youtube Data Scrapping & Performing Data Wrangling, Pre-Processing, EDA & Text Mining -** NLP Tasks on the Youtube Data to predict to which Category the Video Belongs!! **⇢** [ Visit DataScrapping_Viz_Nlp_Tasks Folder ]
+🧩 **3. YouTube Data Scraping, Transformation, Preprocessing, EDA, and NLP-based Text Mining with RAG ⇢** [ Visit DataScrapping_Viz_Nlp_Tasks Folder ]
 
 This Section is further divided into 2 Parts:
 
