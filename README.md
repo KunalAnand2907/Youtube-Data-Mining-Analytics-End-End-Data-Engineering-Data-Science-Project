@@ -91,7 +91,7 @@ Attributes s.a. Video title, Video id, Video Description, Published date, Likes,
 <li> Model Building & Training
 <li> Evaluation and tuning of Parameters
 <li> Comparing all the Word Embeddings Model
-<li> At the end map the Category_id to 16 different Category Name s.a [ Film & Animations, Sports, Science & Technology, Entertainment, Music, News, Daily Vlogs ] etc.
+<li> Topic Categorization: At the end map the Category_id to 16 different Category Name s.a [ Film & Animations, Sports, Science & Technology, Entertainment, Music, News, Daily Vlogs ] etc.
 </ul>
 
 # 
