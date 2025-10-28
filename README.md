@@ -54,40 +54,54 @@ This project utilizes data collected through two different sources:
 
 ---
 
-**2️⃣ Analytic Platform with end - end ETL Data Pipeline For Trending YouTube Video Statistics via Aws Services** ⇢ [Visit ETL_AWS Folder]
+**2️⃣ Analytic Platform with end - end ETL Data Pipeline For Trending YouTube Video Statistics via AWS** ⇢ [Visit ETL_AWS Folder]
 
 #### 📚 Overview
 
-This part aims to securely manage, streamline, and perform analysis on the Structured and Semi-Structured YouTube video data based on the many trending metrics such as video categories (Entertainment, Science and fiction, etc), Video Tile and desc, Channel Name & ID, Likes & Description, Comments & its Count.
+A fully automated ETL Data Pipeline designed to extract, clean, and analyze YouTube trending video data from multiple regions/Countries — leveraging AWS services for scalable processing, schema handling, and real-time analytics.
+The platform securely handles structured and semi-structured data (JSON, CSV, Parquet) to uncover insights across key metrics such as ideo categories (Entertainment, Science and fiction, etc), Video Tile and desc, Channel Name & ID, Likes & Description, comments & its count.
 
-####  📚 Brief Workflow
+#### 🧩 Workflow Summary:
 
-For this, Have built the ETL Data Pipeline from Scratch, where I loaded raw .json Files & .csv Files w.r.t different regions in **1.** Raw_S3_Bucket ➡️ Created a Glue Catalog while running the crawler on raw JSON file ➡️ Got an error as it had a struct Array Items ➡️ Pre-Processed Data for all. Json Files converted into Tabular/ Parquet Format & stored into a new cleansed S3 -- **2.** S3_Cleansed_Bucket by automatically triggering the Lambda Function on every S3 Json Put & doing append operation - pre-processing & then storing it in cleansed S3 [Automating the Process] ➡️ Again Created a Glue Catalog on partitioned CSV Files w.r.t Regions ➡️ Similarly Created a Glue Catalog by running Glue Crawler on all the .csv files by partitioning them w.r.t regions ➡️ In btw runing the Glue Job (Pyspark Script) - doing the schema (DT Types Changes), dropping null Rows & Handling Outliers - then storing it to table & then storing in the nex cleansed s3 ➡️ then Join the 2 Catalog's by Inner Join on Category_Id Col [PK & Fk] & ran the Glue Spark Job and stored the Queried Data in new **3.** S3_Analytic_Bucket ➡️ For Querying the Data present in different S3 Bucket used Athena and stored the metaand & Output Table in new **4.** S3_Query_Athena_Output Bucket ➡️ At the end used the Data from the Analytic S3 Bucket to create Interactive Dashboards having Imp KPIs and various Graphs and charts answering Question such as Top 10/ Bottom 10 Trending videos w.r.t Region and all around the Globe, Total Views/ Total Likes/ Total Comment Count w.r.t Different Categories etc.
+Built from scratch using AWS serverless architecture:
 
-**⇢** <a href="https://drive.google.com/drive/u/0/folders/19idDsEe7xafxWRVmEaYkRSfAbbYlmCbb" target="_blank">**Detailed Workflow Link**</a>
+1️⃣ Raw Data Ingestion → Uploaded regional/Diff. Countries JSON and Partitioned CSV files based on Regional Tag (Ind.csv, eng.csv, etc.) into 2 S3 Raw Bucket. <br>
+2️⃣ Schema Discovery → Created AWS Glue Catalog; handled nested JSON struct arrays via preprocessing. <br>
+3️⃣ Automated Cleansing → Used AWS Lambda triggers on S3 PUT events to clean and append data into S3 (Cleansed Bucket). <br>
+4️⃣ Data Transformation → Executed PySpark Glue Jobs with Glue Bookmarks for schema normalization, null handling, and outlier's treatment. <br>
+5️⃣ Data Integration/ Combining → Performed inner joins on category IDs and stored curated datasets into S3 (Analytic Bucket). <br>
+6️⃣ Query & Analysis → Queried partitioned data with Athena, storing query output & metadata into 2 different named as : a.) S3 (Athena Output Bucket), b.) S3 (Logs Athena Query Bucket) <br>
+7️⃣ Visualization & Insights → Leveraged QuickSight Dashboards to track KPIs like mentioned below, & create diff. data driven dashboards including various Graphs & Charts. <br>
+
+**➔ Top/Bottom 10 trending videos by region**
+
+**➔ Category-wise views, likes, and comment counts**
+
+**➔ Global vs. regional performance trends**
+
+### [🔗 View Detailed Architecture & Workflow →](https://drive.google.com/drive/u/0/folders/19idDsEe7xafxWRVmEaYkRSfAbbYlmCbb)
 
 #
 
-### 🚀 Architecture Diagram
+### 🏗️ Architecture Diagram
 
 ![ETL_AWS](https://github.com/user-attachments/assets/c8efa182-ca19-4680-b121-d2709c8c1d9f)
 
 📚 **Tech Stack:**
 
-➔ **Languages --** SQL, Python3
-
+➔ **Languages --** SQL, Python3 |
 ➔ **File Formats --** Json, Parquet, Csv
 
 ➔ **Services:**
 <ul>
-<li>Amazon S3: Amazon S3 is an object storage service that provides manufacturing scalability, data availability, security, and performance.
-<li>AWS IAM (Users, Groups & Role): This is nothing but identity and access management which enables us to manage access to AWS services and resources securely.
-<li>QuickSight: Amazon QuickSight is a scalable, serverless, embeddable, machine learning-powered business intelligence (BI) service built for the cloud.
-<li>AWS Glue (Crawler, Studio & Glue Catlog): A serverless data integration service that makes it easy to discover, prepare, and combine data for analytics, machine learning, and application development.
-<li>AWS Lambda: Lambda is a computing service that allows programmers to run code without creating or managing servers.
-<li>AWS Athena: Athena is an interactive query service for S3 in which there is no need to load data it stays in S3.
-<li>AWS SNS: A distributed publish/subscribe solution used for application-to-application (A2A) and application-to-person (A2P) communication. SNS topics are used to enable communication: producers publish messages to topics, and consumers subscribe to these topics to receive messages. You can deliver messages to various types of subscribers, such as AWS SQS queues, AWS Lambda functions, and HTTP endpoints. You can also use SNS to send SMS messages, email, and push notifications to end-user devices.
-<li>AWS Cloudwatch & Logs: It enables you to monitor your complete stack (applications, infrastructure, network, and services) and use alarms, logs, and events data to take automated actions and reduce mean time to resolution (MTTR). This frees up important resources and allows you to focus on building applications and business value.
+<li><b>S3:</b> Amazon S3 is an object storage service that provides manufacturing scalability, data availability, security, and performance.
+<li><b>IAM (Users, Groups & Role):</b> This is nothing but identity and access management which enables us to manage access to AWS services and resources securely.
+<li><b>QuickSight:</b> Amazon QuickSight is a scalable, serverless, embeddable, machine learning-powered business intelligence (BI) service built for the cloud.
+<li><b>Glue (Crawler, Studio & Glue Catlog):</b> A serverless data integration service that makes it easy to discover, prepare, and combine data for analytics, machine learning, and application development.
+<li><b>Lambda:</b> Lambda is a computing service that allows programmers to run code without creating or managing servers.
+<li><b>Athena:</b> Athena is an interactive query service for S3 in which there is no need to load data it stays in S3.
+<li><b>SNS:</b> A distributed publish/subscribe solution used for application-to-application (A2A) and application-to-person (A2P) communication. SNS topics are used to enable communication: producers publish messages to topics, and consumers subscribe to these topics to receive messages. You can deliver messages to various types of subscribers, such as AWS SQS queues, AWS Lambda functions, and HTTP endpoints. You can also use SNS to send SMS messages, email, and push notifications to end-user devices.
+<li><b>Cloudwatch & Logs:</b> It enables you to monitor your complete stack (applications, infrastructure, network, and services) and use alarms, logs, and events data to take automated actions and reduce mean time to resolution (MTTR). This frees up important resources and allows you to focus on building applications and business value.
 </ul>
 
 ---
