@@ -85,7 +85,9 @@ Built from scratch using AWS serverless architecture:
 
 ### 🏗️ Architecture Diagram
 
-![ETL_AWS](https://github.com/user-attachments/assets/c8efa182-ca19-4680-b121-d2709c8c1d9f)
+![ETL_AWS](https://github.com/user-attachments/assets/eafba805-cdb6-400d-a208-f061ee1ee643)
+
+#
 
 📚 **Tech Stack:**
 
