@@ -1,36 +1,60 @@
 ## YouTube 📺 Data Mining & NLP: Automated 📈 ETL for scraping, processing, text analytics, insights via Aws, Python, Firebase & Streamlit
 
-### 📌 Demo app Link 
+### ✨ Demo app Link: &nbsp; <a href="https://youtu.be/GaeUzR9szVM"><img src="https://github.com/KunalAnand2907/Youtube_DataMining_Analysis-End-End-Data-Engineering-Data-Science-Project/assets/46574881/4f490ebc-1c79-4b10-b869-cf319682598e"></a>
 
-<a href="https://youtu.be/GaeUzR9szVM"><img src="https://github.com/KunalAnand2907/Youtube_DataMining_Analysis-End-End-Data-Engineering-Data-Science-Project/assets/46574881/4f490ebc-1c79-4b10-b869-cf319682598e"></a>
-
+#
 
 ### 📌 Dataset Overview:
-For this Project, I have used 2 Types of Data as mentioned below:
-<ul>
-<li> <b>Trending YouTube Video Statistics Data</b> which is taken from Kaggle.
 
-**Dataset Link:** https://www.kaggle.com/datasets/datasnaek/youtube-new
+This project utilizes data collected through two different sources:
 
-<b>1. Csv File - </b>Each region’s data is in a separate file. Data includes the video title, video id, category_id [ranging from 1-41], channel title, publish time, tags, views, likes and dislikes, description, and comment count. <br>
-<b>2. Json File -</b> Is in Key-Value format, where for each Region it has 30 nested K-V Pairs which included in the items Array, here for each Key we have id act as a Primary Key/ Joining Key and Snippet Struct Array which has nested k:v which includes Channel_id & Category Name where the videos are categorized into different categories like Film & Animations, Sports, Science & Technology, Entertainment, Music & Many More etc. 
+<ul> <li> <b>1. Trending YouTube Video Statistics</b> — sourced from Kaggle <br>
+ 
+<b>🔗 Dataset Link:</b> [YouTube Trending Video Dataset](https://www.kaggle.com/datasets/datasnaek/youtube-new) 
+ <ul> <li><b>CSV Files:</b> Each region’s dataset is stored separately and contains attributes such as <i>video title, video ID, category ID (1–41), channel title, publish time, tags, views, likes, dislikes, description,</i> and <i>comment count.</i></li> <li><b>JSON Files:</b> Structured in key-value pairs for each region, with an <code>id</code> acting as the primary key. Each record includes a <code>snippet</code> object containing nested fields like <code>channelId</code> and <code>categoryName</code>—categorizing videos into domains such as <i>Music, Sports, Technology, Entertainment,</i> and more.</li> </ul> </li> 
+<br>
+<li> <b>2. YouTube Data Scraped via YouTube Data API</b> — collected dynamically based on user-defined search terms. For this project, data was extracted using the keyword <b>"Data Science"</b>. </li> </ul>
 
-<li> <b>Youtube Data Scrapped via Youtube Data API </b> according to the search word entered by the user, for our case I have used as 'Data Science'
-</ul>
+#
+
+### 🚀 Key Features:
+
+-- In Making
+
+#
+
+### 📦 Project Structure: 
+
+-- In Making
+
+#
 
 ### 🎯 The Project is divided into 3 Parts:
 
 ---
 
- 🧩 **1. Real-Time User Authentication & Authorization via Firebase & Show/Post Posts via Firestore on Streamlit App** ⇢ [ Visit Streamlit_App Folder ]
-<ul>
-<li>Any User can First Sign Up with an Email, Password, and unique Username and then log in to the Web App - Make Sure that the Email and username are different for each User - at the Backend I have used Firebase.
-<li>Users has the option to post their thoughts or Queries in Post Notes Space, also they can see other People's Posts & can delete their Posts according to their Need. I have used Firestore (No SQL Real Time Database) which stores the data in Documents [ Unique Username ] and it includes a Collection that has Post's ordered w.r.t User_ID for each User.
-</ul>
+ **1️⃣ Real-Time Auth & Interactive User Posts with Firebase + Firestore on Streamlit App**
+
+🔥 This module powers a secure, real-time user experience using Firebase Authentication and Firestore Database, seamlessly integrated into the Streamlit App ⇢ [Visit Streamlit_App Folder](https://github.com/KunalAnand2907/Youtube-Data-Mining-Analytics-End-End-Data-Engineering-Data-Science-Project/tree/master/Part1_Streamlit_App)
+
+**⚙️ Key Functionalities**
+
+1️. User Authentication & Authorization:
+ <ul> 
+ <li> New users can Sign Up using an email, password, and unique username, and later Log In securely via Firebase Authentication. </li>
+ <li> Each user’s credentials are validated to ensure uniqueness of both email and username, enabling a personalized session and secure data access. </li>
+ </ul>
+ 
+2️. Dynamic Post Management via Firestore:
+<ul> 
+ <li> Authenticated users can create, view, and delete there own posts in a collaborative Post Notes Space & can view other's & owner post on Home Page. </li>
+ <li> All posts are stored in Firestore (NoSQL Real-Time Database) under each user’s unique document ID. </li>
+ <li> Data is organized into collections per user, where posts are ordered by User_ID, ensuring fast retrieval and real-time updates directly reflected in the Streamlit interface. </li>
+ </ul>
 
 ---
 
-🧩 **2. Analytic Platform with end - end ETL Data Pipeline For Trending YouTube Video Statistics via Aws Services** ⇢ [Visit ETL_AWS Folder]
+**2️⃣ Analytic Platform with end - end ETL Data Pipeline For Trending YouTube Video Statistics via Aws Services** ⇢ [Visit ETL_AWS Folder]
 
 #### 📚 Overview
 
@@ -67,7 +91,7 @@ For this, Have built the ETL Data Pipeline from Scratch, where I loaded raw .jso
 </ul>
 
 ---
-🧩 **3. YouTube Data Scraping, Transformation, Preprocessing, EDA, and NLP-based Text Mining with RAG ⇢** [ Visit DataScrapping_Viz_Nlp_Tasks Folder ]
+**3️⃣ YouTube Data Scraping, Transformation, Preprocessing, EDA, and NLP-based Text Mining with RAG ⇢** [ Visit DataScrapping_Viz_Nlp_Tasks Folder ]
 
 This Section is further divided into 2 Parts:
 
