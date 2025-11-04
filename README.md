@@ -134,6 +134,13 @@ Attributes s.a. Video title, Video id, Video Description, Published date, Likes,
 <li> Topic Categorization: At the end map the Category_id to 16 different Category Name s.a [ Film & Animations, Sports, Science & Technology, Entertainment, Music, News, Daily Vlogs ] etc.
 </ul>
 
+---
+
+**4️⃣ YouTube Comments Sentiment Analyze**
+
+> 🔥 Analyze, visualize, and understand YouTube audience sentiment in one click!
+This Streamlit app uses a multilingual BERT model to classify YouTube comments as Positive, Neutral, or Negative, while automatically filtering spam and generating insights through charts, word clouds, and top comment highlights.
+
 # 
 ### Watch the Below Video for working of the App
 
