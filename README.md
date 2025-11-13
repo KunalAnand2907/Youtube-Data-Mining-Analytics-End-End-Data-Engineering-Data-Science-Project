@@ -1,3 +1,8 @@
+<p align="center">
+  <a href="https://www.youtube.com/@kunalanand1579" target="_blank">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/0/09/YouTube_full-color_icon_%282017%29.svg" alt="YouTube Logo" width="90">
+</p>
+
 ## YouTube 📺 Data Mining & NLP: Automated 📈 ETL for scraping, processing, text analytics, insights via Aws, Python, Firebase & Streamlit
 
 ### ✨ Demo app Link: &nbsp; <a href="https://yt-comments-sentiment-analyzer.streamlit.app/"><img src="https://github.com/KunalAnand2907/Youtube_DataMining_Analysis-End-End-Data-Engineering-Data-Science-Project/assets/46574881/4f490ebc-1c79-4b10-b869-cf319682598e"></a>
