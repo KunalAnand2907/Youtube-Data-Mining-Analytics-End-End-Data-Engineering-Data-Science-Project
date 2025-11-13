@@ -86,7 +86,7 @@ This project utilizes data collected through two different sources:
 
 ---
 
-**2️⃣ Analytic Platform with end - end ETL Data Pipeline For Trending YouTube Video Statistics via AWS** ⇢ [Visit ETL_AWS Folder]
+**2️⃣ Analytic Platform with end - end ETL Data Pipeline For Trending YouTube Video Statistics via AWS** ⇢ [Visit ETL_AWS Folder](https://github.com/KunalAnand2907/Youtube-Data-Mining-Analytics-End-End-Data-Engineering-Data-Science-Project/tree/master/Part2_ETL_Aws)
 
 #### 📚 Overview
 
@@ -107,7 +107,7 @@ Built from scratch using AWS serverless architecture:
 
 **➔ Top/Bottom 10 trending videos by region** &nbsp; **➔ Category-wise views, likes, & comment counts** &nbsp; **➔ Global vs. regional performance trends**
 
-### [🔗 View Detailed Architecture & Workflow →](https://drive.google.com/drive/u/0/folders/19idDsEe7xafxWRVmEaYkRSfAbbYlmCbb)
+### [🔗 View Detailed Architecture & Workflow](https://drive.google.com/drive/u/0/folders/19idDsEe7xafxWRVmEaYkRSfAbbYlmCbb)
 
 #
 
@@ -131,7 +131,7 @@ Built from scratch using AWS serverless architecture:
 </ul>
 
 ---
-**3️⃣ YouTube Data Scraping → Transformation → Preprocessing → EDA → NLP-based Text Mining (with RAG) ⇢** [ Visit DataScrapping_Viz_Nlp_Tasks Folder ]
+**3️⃣ YouTube Data Scraping → Transformation → Preprocessing → EDA → NLP-based Text Mining (with RAG) ⇢** [Visit DataScrapping_Viz_Nlp_Tasks Folder](https://github.com/KunalAnand2907/Youtube-Data-Mining-Analytics-End-End-Data-Engineering-Data-Science-Project/tree/master/Part3_DataScrapping_Viz_Nlp_Tasks)
 
 #
 
@@ -169,7 +169,7 @@ Title, Description, Video ID, Publish Date, Likes, Dislikes, Views, Comments
 <ul>
 <li>Frequency based: Bag of Words, TF-IDF
 <li>Prediction/ DL-based: Word2Vec, Glove
-<li>Trnasformers/ LSTM Based: Open AI Embedder, Ollama, Gemini, Hugging Face, Elmmo, Qdrant 
+<li>Transformers/ LSTM Based: Open AI Embedder, Ollama, Gemini, Hugging Face, Elmmo, Qdrant 
 </ul>
 
 #### 🤖 Model Development & Evaluation
@@ -189,7 +189,9 @@ This section showcases the full lifecycle—from raw YouTube data → structured
 > 🔥 Analyze, visualize, and understand YouTube audience sentiment for yor videos in one click!
 This Streamlit app uses a multilingual BERT (transformer) model to classify YouTube comments as Positive, Neutral, or Negative, while automatically filtering spam and generating insights through charts, word clouds, and top comment (top 5 +ve, -ve & neutral) highlights with a <code> Download csv File </code> button to store sentiment insights locally.
 
+> **[🔗 Watch the Workflow & Demo in Action](https://github.com/KunalAnand2907/Youtube-Comments-Sentiment-Analyzer/)**
+
 # 
-### Watch the Below Video for working of the App
+### ⚡ Experience the app in action—watch the video below!
 
 [![Main_Page_ss](https://github.com/KunalAnand2907/Youtube_DataMining_Analysis-End-End-Data-Engineering-Data-Science-Project/assets/46574881/b480838d-991b-4387-994c-bb3c90e9a081)](https://youtu.be/GaeUzR9szVM)
