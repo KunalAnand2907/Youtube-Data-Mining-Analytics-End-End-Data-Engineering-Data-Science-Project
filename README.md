@@ -19,17 +19,17 @@ This project utilizes data collected through two different sources:
 
 ### 🚀 Key Features:
 
--- In Making
+
 
 #
 
 ### 📦 Project Structure: 
 
--- In Making
+
 
 #
 
-### 🎯 The Project is divided into 3 Parts:
+### 🎯 The Project is divided into 4 Parts:
 
 ---
 
@@ -138,8 +138,8 @@ Attributes s.a. Video title, Video id, Video Description, Published date, Likes,
 
 **4️⃣ YouTube Comments Sentiment Analyze**
 
-> 🔥 Analyze, visualize, and understand YouTube audience sentiment in one click!
-This Streamlit app uses a multilingual BERT model to classify YouTube comments as Positive, Neutral, or Negative, while automatically filtering spam and generating insights through charts, word clouds, and top comment highlights.
+> 🔥 Analyze, visualize, and understand YouTube audience sentiment for yor videos in one click!
+This Streamlit app uses a multilingual BERT (transformer) model to classify YouTube comments as Positive, Neutral, or Negative, while automatically filtering spam and generating insights through charts, word clouds, and top comment (top 5 +ve, -ve & neutral) highlights with a <code> Download csv File </code> button to store sentiment insights locally.
 
 # 
 ### Watch the Below Video for working of the App
