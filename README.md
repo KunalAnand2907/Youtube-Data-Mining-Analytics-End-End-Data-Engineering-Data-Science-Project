@@ -54,16 +54,16 @@ This project utilizes data collected through two different sources:
 | **Data Handling** | Pandas, NumPy 📊 |
 | **Visualization** | Plotly, Matplotlib, WordCloud 📈 |
 | **NLP & ML** | Hugging Face (Transformers 🤗) |
-| **Security & Database / NoSQL** | Firebase (Firestore) 🔥 |
+| **Security & Database / NoSQL** | IAM, Firebase (Firestore) 🔥 |
 | **ETL – Compute** | Glue & Lambda ⚙️ |
 | **ETL – Storage** | S3 🪣 |
 | **Workflow Orchestration** | Step Functions 🔄  |
 | **Monitoring & Logging** | CloudWatch, Cognito, CloudTrail & Config 📡 |
 | **Notification/Msgs.** | SNS, SQS, MSK  |
 | **APIs** | YouTube Data API v3 🔑 |
-| **Deployment** | Streamlit Cloud ☁️ |
+| **DevOps & Deployment** | Streamlit Cloud ☁️, Git, Github |
 | **Caching** | Streamlit `@st.cache_data` ⚡ |
-| **Environment** | Jupyter / VS Code 💻 |
+| **Editors** | Jupyter / VS Code 💻 |
 
 #
 
