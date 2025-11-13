@@ -49,7 +49,7 @@ This project utilizes data collected through two different sources:
 
 | Category | Technology Used |
 |-----------|-----------------|
-| **Frontend** | Streamlit 🎈 |
+| **Frontend** | Streamlit 🎈, HTML, CSS, JavaScript |
 | **Backend / Scripting** | Python 🐍 |
 | **Data Handling** | Pandas, NumPy 📊 |
 | **Visualization** | Plotly, Matplotlib, WordCloud 📈 |
