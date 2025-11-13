@@ -19,13 +19,45 @@ This project utilizes data collected through two different sources:
 
 ### 🚀 Key Features:
 
-
+<ul>
+<li>An interactive chatbot that makes exploring the project, any related questions, its features, workflow, and tech stack effortless
+<li>Automated scraping of YouTube metadata, comments, and channel insights using Python-based ETL
+<li>Serverless ingestion pipeline built with AWS (Lambda, S3, CloudWatch) for scalable execution
+<li>Real-time text preprocessing (tokenization, regex cleaning, stopwords, stemming, lemmatization)
+<li>Advanced NLP analytics including sentiment analysis, topic modeling, NER, and word embeddings
+<li>Firebase backend for structured data storage and quick retrieval
+<li>Interactive Streamlit dashboard for visual insights, KPIs, and deep comment analytics
+<li>Modular pipeline design enabling plug-and-play ML/DL models like TF-IDF, Word2Vec, LSTM/Bi-LSTM
+<li>Error-tolerant ETL workflow with batch retries, logging, and monitoring
+</ul>
 
 #
 
 ### 📦 Project Structure: 
 
 -- In Making
+
+#
+
+### ⚙️ Tech Stack:
+
+| Category | Technology Used |
+|-----------|-----------------|
+| **Frontend** | Streamlit 🎈 |
+| **Backend / Scripting** | Python 🐍 |
+| **Data Handling** | Pandas, NumPy 📊 |
+| **Visualization** | Plotly, Matplotlib, WordCloud 📈 |
+| **NLP & ML** | Hugging Face (Transformers 🤗) |
+| **Security & Database / NoSQL** | Firebase (Firestore) 🔥 |
+| **ETL – Compute** | Glue & Lambda ⚙️ |
+| **ETL – Storage** | S3 🪣 |
+| **Workflow Orchestration** | Step Functions 🔄  |
+| **Monitoring & Logging** | CloudWatch, Cognito, CloudTrail & Config 📡 |
+| **Notification/Msgs.** | SNS, SQS, MSK  |
+| **APIs** | YouTube Data API v3 🔑 |
+| **Deployment** | Streamlit Cloud ☁️ |
+| **Caching** | Streamlit `@st.cache_data` ⚡ |
+| **Environment** | Jupyter / VS Code 💻 |
 
 #
 
@@ -39,13 +71,13 @@ This project utilizes data collected through two different sources:
 
 **⚙️ Key Functionalities**
 
-1️. User Authentication & Authorization:
+**1️. User Authentication & Authorization:**
  <ul> 
  <li> New users can Sign Up using an email, password, and unique username, and later Log In securely via Firebase Authentication. </li>
  <li> Each user’s credentials are validated to ensure uniqueness of both email and username, enabling a personalized session and secure data access. </li>
  </ul>
  
-2️. Dynamic Post Management via Firestore:
+**2️. Dynamic Post Management via Firestore:**
 <ul> 
  <li> Authenticated users can create, view, and delete there own posts in a collaborative Post Notes Space & can view other's & owner post on Home Page. </li>
  <li> All posts are stored in Firestore (NoSQL Real-Time Database) under each user’s unique document ID. </li>
@@ -65,19 +97,15 @@ The platform securely handles structured and semi-structured data (JSON, CSV, Pa
 
 Built from scratch using AWS serverless architecture:
 
-1️⃣ Raw Data Ingestion → Uploaded regional/Diff. Countries JSON and Partitioned CSV files based on Regional Tag (Ind.csv, eng.csv, etc.) into 2 S3 Raw Bucket. <br>
-2️⃣ Schema Discovery → Created AWS Glue Catalog; handled nested JSON struct arrays via preprocessing. <br>
-3️⃣ Automated Cleansing → Used AWS Lambda triggers on S3 PUT events to clean and append data into S3 (Cleansed Bucket). <br>
-4️⃣ Data Transformation → Executed PySpark Glue Jobs with Glue Bookmarks for schema normalization, null handling, and outlier's treatment. <br>
-5️⃣ Data Integration/ Combining → Performed inner joins on category IDs and stored curated datasets into S3 (Analytic Bucket). <br>
-6️⃣ Query & Analysis → Queried partitioned data with Athena, storing query output & metadata into 2 different named as : a.) S3 (Athena Output Bucket), b.) S3 (Logs Athena Query Bucket) <br>
-7️⃣ Visualization & Insights → Leveraged QuickSight Dashboards to track KPIs like mentioned below, & create diff. data driven dashboards including various Graphs & Charts. <br>
+1️⃣ **Raw Data Ingestion →** Uploaded regional/Diff. Countries JSON and Partitioned CSV files based on Regional Tag (Ind.csv, eng.csv, etc.) into 2 S3 Raw Bucket. <br>
+2️⃣ **Schema Discovery →** Created AWS Glue Catalog; handled nested JSON struct arrays via preprocessing. <br>
+3️⃣ **Automated Cleansing →** Used AWS Lambda triggers on S3 PUT events to clean and append data into S3 (Cleansed Bucket). <br>
+4️⃣ **Data Transformation →** Executed PySpark Glue Jobs with Glue Bookmarks for schema normalization, null handling, and outlier's treatment. <br>
+5️⃣ **Data Integration/ Combining →** Performed inner joins on category IDs and stored curated datasets into S3 (Analytic Bucket). <br>
+6️⃣ **Query & Analysis →** Queried partitioned data with Athena, storing query output & metadata into 2 different named as :<code> a. S3 (Athena Output Bucket)</code>, <code>b.) S3 (Logs Athena Query Bucket)</code> <br>
+7️⃣ **Visualization & Insights →** Leveraged QuickSight Dashboards to track KPIs like mentioned below, & create diff. data driven dashboards including various Graphs & Charts. <br>
 
-**➔ Top/Bottom 10 trending videos by region**
-
-**➔ Category-wise views, likes, and comment counts**
-
-**➔ Global vs. regional performance trends**
+**➔ Top/Bottom 10 trending videos by region** &nbsp; **➔ Category-wise views, likes, & comment counts** &nbsp; **➔ Global vs. regional performance trends**
 
 ### [🔗 View Detailed Architecture & Workflow →](https://drive.google.com/drive/u/0/folders/19idDsEe7xafxWRVmEaYkRSfAbbYlmCbb)
 
@@ -89,12 +117,8 @@ Built from scratch using AWS serverless architecture:
 
 #
 
-📚 **Tech Stack:**
+📚 **Services:**
 
-➔ **Languages --** SQL, Python3 |
-➔ **File Formats --** Json, Parquet, Csv
-
-➔ **Services:**
 <ul>
 <li><b>S3:</b> Amazon S3 is an object storage service that provides manufacturing scalability, data availability, security, and performance.
 <li><b>IAM (Users, Groups & Role):</b> This is nothing but identity and access management which enables us to manage access to AWS services and resources securely.
