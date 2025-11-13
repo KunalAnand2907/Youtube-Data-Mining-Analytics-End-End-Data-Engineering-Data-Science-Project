@@ -25,7 +25,7 @@ This project utilizes data collected through two different sources:
 
 ### 📦 Project Structure: 
 
-
+-- In Making
 
 #
 
@@ -107,32 +107,56 @@ Built from scratch using AWS serverless architecture:
 </ul>
 
 ---
-**3️⃣ YouTube Data Scraping, Transformation, Preprocessing, EDA, and NLP-based Text Mining with RAG ⇢** [ Visit DataScrapping_Viz_Nlp_Tasks Folder ]
+**3️⃣ YouTube Data Scraping → Transformation → Preprocessing → EDA → NLP-based Text Mining (with RAG) ⇢** [ Visit DataScrapping_Viz_Nlp_Tasks Folder ]
 
-This Section is further divided into 2 Parts:
+#
 
-▶️ **Scrapping Youtube data, Pre-Processing, Wrangling, and Visualizing Data via different Charts & Graphs.**
+This module is split into two major components:
 
-⇢ Youtube data is scrapped by using Youtube Data API according to search Data Science & we have Attributes such as:
+**▶️ Part 1: Automated YouTube Data Extraction, Cleaning & Insightful Visual Analytics**
+
+⇢ Using the YouTube Data API, the pipeline scrapes topic-specific content (e.g., Data Science) and captures rich metadata::
 <ul>
-<li> <b> For Different Channel's Data:</b>
-Attributes s.a. Channel Name, subscribers, Total Views, Total Videos, Playlist ID
-<li> <b> For each Channel Data:</b>
-Attributes s.a. Video title, Video id, Video Description, Published date, Likes, Dislikes, Views, Comments
-<li> After that I Performed Data Processing, Wrangling operations on the Data mentioned above & then Performed EDA (uni, Bi, Tri) Variate Data Visualization on the Cleaned Data
+<li> <b> Channel-level attributes: </b>
+Channel Name, Subscribers, Total Views, Video Count, Playlist ID
+<li> <b> Video-level attributes: </b>
+Title, Description, Video ID, Publish Date, Likes, Dislikes, Views, Comments
+<li> After data collection, extensive data wrangling + preprocessing operations are performed, followed by univariate, bivariate, and multivariate EDA using interactive charts and visualizations.
+<li> This part essentially turns raw YouTube metadata into clean, structured insights—ready for downstream NLP tasks.
 </ul>
 
-📄🔍 **Text Mining - Performing NLP Tasks on the Youtube Statistics Data**
+# 
 
-⇢ Predict the Category_id (Y) Based on Video_Title (X)
+📄🔍 **Part 2: NLP-Powered Text Mining & Category Prediction (RAG Enhanced)**
+
+⇢ A full end-to-end text analytics workflow is built on YouTube video statistics and metadata:
+
+#### 🔤 Text Preprocessing Pipeline
+<ol>
+<li>Tokenization (sentence, word)
+<li>Regex cleaning (remove punctuation, special chars, extra whitespaces)
+<li>Stopword removal
+<li>Stemming & Lemmatization
+<li>POS Tagging & Named Entity Recognition
+</ol>
+
+#### 🧠 Word Embeddings based on MTEB Research Paper
+
 <ul>
-<li> <b>Text Pre Processing 1 --</b> Tokenize [Sentences, Words] ➡️ Text Cleaning { Regex - remove Punctuations, Special Chars, extra white spaces} ➡️ Remove StopWords ➡️ Stemming & Lemmatization ➡️ POS Tagging ➡️ NER
-<li> <b>Text Pre Processing 2 --</b> Word Embeddings { Ml Embeddings - BOW, TF-IDF, Word2Vec, DL Embeddings - LSTM/ Bi - Dir LSTM with Word Embeddings }
-<li> Model Building & Training
-<li> Evaluation and tuning of Parameters
-<li> Comparing all the Word Embeddings Model
-<li> Topic Categorization: At the end map the Category_id to 16 different Category Name s.a [ Film & Animations, Sports, Science & Technology, Entertainment, Music, News, Daily Vlogs ] etc.
+<li>Frequency based: Bag of Words, TF-IDF
+<li>Prediction/ DL-based: Word2Vec, Glove
+<li>Trnasformers/ LSTM Based: Open AI Embedder, Ollama, Gemini, Hugging Face, Elmmo, Qdrant 
 </ul>
+
+#### 🤖 Model Development & Evaluation
+<ul>
+<li>Training supervised models to predict Category_ID (Y) from Video Title (X)
+<li>Hyperparameter tuning and performance comparison across multiple embedding strategies
+<li>Final mapping of Category_ID to 16 YouTube content categories (e.g., Music, Sports, Tech, Entertainment, Vlogs, News, etc.)
+</ul>
+
+**✨ Section Focus:**
+This section showcases the full lifecycle—from raw YouTube data → structured analytics → deep NLP modeling—demonstrating how to extract knowledge, classify content, and power intelligent search/RAG systems on top of unstructured YouTube data.
 
 ---
 
