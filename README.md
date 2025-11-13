@@ -26,15 +26,15 @@ This project utilizes data collected through two different sources:
 ### 🚀 Key Features:
 
 <ul>
-<li>An interactive chatbot that makes exploring the project, any related questions, its features, workflow, and tech stack effortless
-<li>Automated scraping of YouTube metadata, comments, and channel insights using Python-based ETL
-<li>Serverless ingestion pipeline built with AWS (Lambda, S3, CloudWatch) for scalable execution
-<li>Real-time text preprocessing (tokenization, regex cleaning, stopwords, stemming, lemmatization)
-<li>Advanced NLP analytics including sentiment analysis, topic modeling, NER, and word embeddings
-<li>Firebase backend for structured data storage and quick retrieval
-<li>Interactive Streamlit dashboard for visual insights, KPIs, and deep comment analytics
-<li>Modular pipeline design enabling plug-and-play ML/DL models like TF-IDF, Word2Vec, LSTM/Bi-LSTM
-<li>Error-tolerant ETL workflow with batch retries, logging, and monitoring
+<li>An interactive chatbot that makes exploring the <code>project | any related questions | its features | workflow | tech stack</code> effortless
+<li>Automated scraping of <code>YouTube metadata | comments | channel insights</code> using Python-based ETL
+<li>Serverless ingestion pipeline built with <code>AWS (Lambda | S3 | CloudWatch)</code> for scalable execution
+<li>Real-time text preprocessing <code>(tokenization | regex cleaning | stopwords | stemming | lemmatization)</code>
+<li>Advanced NLP analytics including <code>sentiment analysis | topic modeling | NER | word embeddings</code>code>
+<li>Firebase backend for structured <code>data storage and quick retrieval</code>
+<li>Interactive plotly dashboards for <code>visual insights | KPIs | deep comment analytics</code>
+<li>Modular pipeline design enabling plug-and-play <code>ML/DL models like TF-IDF | Word2Vec | LSTM/Bi-LSTM</code>
+<li>Error-tolerant ETL workflow with <code>batch retries | logging | monitoring</code>
 </ul>
 
 #
@@ -108,7 +108,7 @@ Built from scratch using AWS serverless architecture:
 3️⃣ **Automated Cleansing →** Used AWS Lambda triggers on S3 PUT events to clean and append data into S3 (Cleansed Bucket). <br>
 4️⃣ **Data Transformation →** Executed PySpark Glue Jobs with Glue Bookmarks for schema normalization, null handling, and outlier's treatment. <br>
 5️⃣ **Data Integration/ Combining →** Performed inner joins on category IDs and stored curated datasets into S3 (Analytic Bucket). <br>
-6️⃣ **Query & Analysis →** Queried partitioned data with Athena, storing query output & metadata into 2 different named as :<code> a. S3 (Athena Output Bucket)</code>, <code>b.) S3 (Logs Athena Query Bucket)</code> <br>
+6️⃣ **Query & Analysis →** Queried partitioned data with Athena, storing query output & metadata into 2 different named as: <code>a. S3 (Athena Output Bucket)</code>, <code>b.) S3 (Logs Athena Query Bucket)</code> <br>
 7️⃣ **Visualization & Insights →** Leveraged QuickSight Dashboards to track KPIs like mentioned below, & create diff. data driven dashboards including various Graphs & Charts. <br>
 
 **➔ Top/Bottom 10 trending videos by region** &nbsp; **➔ Category-wise views, likes, & comment counts** &nbsp; **➔ Global vs. regional performance trends**
@@ -192,7 +192,7 @@ This section showcases the full lifecycle—from raw YouTube data → structured
 
 **4️⃣ YouTube Comments Sentiment Analyze**
 
-> 🔥 Analyze, visualize, and understand YouTube audience sentiment for yor videos in one click!
+> 🔥 *Analyze, visualize, and understand YouTube audience sentiment for yor videos in one click!*
 This Streamlit app uses a multilingual BERT (transformer) model to classify YouTube comments as Positive, Neutral, or Negative, while automatically filtering spam and generating insights through charts, word clouds, and top comment (top 5 +ve, -ve & neutral) highlights with a <code> Download csv File </code> button to store sentiment insights locally.
 
 > **[🔗 Watch the Workflow & Demo in Action](https://github.com/KunalAnand2907/Youtube-Comments-Sentiment-Analyzer/)**
