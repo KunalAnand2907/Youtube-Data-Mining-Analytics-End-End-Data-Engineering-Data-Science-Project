@@ -215,4 +215,4 @@ applying added LLM intelligence on top of it.
 #
 ### ⚡ Experience the app in action—watch the video below!
 
-[![Landing_Page](https://github.com/KunalAnand2907/Youtube-Data-Mining-Analytics-End-End-Data-Engineering-Data-Science-Project/blob/master/Landing_Page.png)](https://youtu.be/GaeUzR9szVM)
+[![Landing_Page](https://github.com/KunalAnand2907/Youtube-Data-Mining-Analytics-End-End-Data-Engineering-Data-Science-Project/blob/master/Landing_Page.png)](https://www.youtube.com/watch?v=jnX28Kt8u5w)
